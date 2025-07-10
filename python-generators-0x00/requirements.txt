@@ -1,0 +1,12 @@
+# uncomment optional dependencies to use
+# MySQL Database Connectivity
+mysql-connector-python>=8.0.33,<9.0.0
+
+# Type checking support (optional, for development)
+mypy>=1.0.0
+
+# Code formatting (optional, for development)
+black>=22.0.0
+
+# Linting (optional, for development)
+flake8>=4.0.0

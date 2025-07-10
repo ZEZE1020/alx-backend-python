@@ -15,7 +15,6 @@ This project implements a Python-based database seeding system for the ALX_prode
 - [API Documentation](#api-documentation)
 - [Testing](#testing)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -267,9 +266,6 @@ All operations are logged with appropriate levels:
 - Include detailed description if necessary
 - Reference issues: "Fix #123: Add validation for user emails"
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Support
 
