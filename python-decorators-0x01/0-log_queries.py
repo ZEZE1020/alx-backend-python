@@ -2,6 +2,7 @@
 """Module for logging database queries using a decorator."""
 import sqlite3
 import functools
+from datetime import datetime
 
 
 def log_queries():
@@ -10,7 +11,8 @@ def log_queries():
         @functools.wraps(func)
         def wrapper(query, *args, **kwargs):
             """Wrapper function that logs the query and executes the function."""
-            print(f"Query: {query}")
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"[{timestamp}] Query: {query}")
             return func(query, *args, **kwargs)
         return wrapper
     return decorator
