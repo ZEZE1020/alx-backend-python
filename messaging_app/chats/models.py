@@ -1,7 +1,7 @@
 import uuid
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
+from django.utils import timezone
 
 class CustomUser(AbstractUser):
     """
@@ -26,6 +26,21 @@ class CustomUser(AbstractUser):
         blank=True,
         help_text="Optional phone contact"
     )
+
+    password_changed_at = models.DateTimeField(
+            null=True,
+            blank=True,
+            help_text="Timestamp of last password change"
+        )
+    force_password_change = models.BooleanField(
+            default=False,
+            help_text="Flag to force user to change password on next login"
+        )
+    
+    def save(self, *args, **kwargs):
+            if self._password is not None:
+                self.password_changed_at = timezone.now()
+            super().save(*args, **kwargs)
 
     ROLE_CHOICES = [
         ('guest', 'Guest'),
