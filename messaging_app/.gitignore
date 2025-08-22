@@ -20,11 +20,17 @@ db.sqlite3-journal
 media/
 static/
 staticfiles/
+chats/migrations/
+*.pot
+*.mo
+*.pyc
+*.pyo
+*.pyd
 
 # IDE - VSCode
 .vscode/
 *.code-workspace
-.history/
+tory/
 
 # System Files
 .DS_Store
