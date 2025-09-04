@@ -48,6 +48,13 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+<<<<<<< HEAD
+=======
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'chats.middleware.RequestLoggingMiddleware',
+    'chats.middleware.RestrictAccessByTimeMiddleware', 
+    'chats.middleware.OffensiveLanguageMiddleware',
+>>>>>>> b803274 (fix: update settings.p)
 ]
 
 REST_FRAMEWORK = {
